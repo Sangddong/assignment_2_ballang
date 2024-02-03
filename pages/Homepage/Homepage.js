@@ -1,19 +1,24 @@
 import { useEffect, useState } from 'react';
-import productsAPI from '../../api/products/products.api';
 import ProductList from '../../components/ProductList/ProductList';
+import productsAPI from '../../api/products/products.api';
+import api from '../../api/api';
 
 function Homepage() {
-  
-  const [products, setProducts] = useState({endpoint1: []});
+  const [products, setProducts] = useState({ endpoint1:[] });
 
   useEffect(() => {
-    productsAPI.products.wholeProducts("endpoint1")
-      .then((data) => setProducts(data));
+    api.products.wholeProducts("endpoint1")
+      .then((data) => {
+        setProducts({ endpoint1: data }); // 상태를 올바르게 업데이트
+      })
+      .catch((error) => {
+        console.error('Error fetching products:', error);
+      });
   }, []);
 
   return (
     <div>
-      <ProductList movies={products.endpoint1} />
+      <ProductList products={products.endpoint1} />
     </div>
   );
 }

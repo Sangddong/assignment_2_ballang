@@ -1,0 +1,22 @@
+footer {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+
+    >ul {
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 0;
+        list-style: none;
+
+        >li {
+            padding: 5px;
+        }
+
+        >li:hover {
+            color: rgb(79, 79, 79);
+        }
+    }
+}

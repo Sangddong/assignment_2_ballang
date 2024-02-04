@@ -13,17 +13,19 @@ const wholeProducts = async () => {
   return data;
 };
 
-const onlyProduct = async (productId) => {
+const singleProduct = async (productId) => {
   const endpoint2 = `https://port-0-ballang-server-qrd2als49b8m4.sel5.cloudtype.app/products/${productId}`;
-
+  console.log(endpoint2)
   const response = await fetch(endpoint2, options);
   const data = await response.json();
+  console.log(response);
   return data;
+
 };
 
 const productsAPI = {
   wholeProducts,
-  onlyProduct,
+  singleProduct,
 };
 
 export default productsAPI;

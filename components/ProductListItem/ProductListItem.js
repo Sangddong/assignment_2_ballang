@@ -4,19 +4,21 @@ import styles from "./ProductListItem.module.scss";
 
 function ProductListItem({ product }) {
   return (
-    <Link to={`/${product.id}`}>
-      <ul className={styles.product}>
+    <div>
+    <Link to={`/detail/${product.id}`} className={styles.product}>
+      <ul className={styles.item}>
         <li>
           <img src={product.img_i} alt={product.goodsnm} />
         </li>
         <li>{product.brand.name}</li>
         <li>{product.goodsnm}</li>
         <ul>
-          <li>{product.price}</li>
+          <li>{product.price}원</li>
           <li>{product.sale_percent}%</li>
         </ul>
       </ul>
     </Link>
+    </div>
   );
 }
 

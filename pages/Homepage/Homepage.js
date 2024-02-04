@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import ProductList from '../../components/ProductList/ProductList';
-import productsAPI from '../../api/products/products.api';
 import api from '../../api/api';
 
 function Homepage() {

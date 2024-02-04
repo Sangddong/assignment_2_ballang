@@ -8,7 +8,7 @@ import MyPage from "./pages/MyPage";
 import CartPage from "./pages/CartPage";
 import DetailPage from "./pages/ProductDetailPage/ProductDetailPage";
 
-function App({ products }) {
+function App() {
   return (
     <AuthProvider>
       <Router>
@@ -17,7 +17,8 @@ function App({ products }) {
             <Route path="/" element={<HomePage />} />
             <Route path="/sign-in" element={<SignInPage />} />
             <Route path="/mypage" element={<MyPage />} />
-            <Route path='/productId' element={<DetailPage />} />
+            <Route path="/detail/:productId" element={<DetailPage />} />
+            <Route path="/cart" element={<CartPage />} />
           </Route>
         </Routes>
       </Router>

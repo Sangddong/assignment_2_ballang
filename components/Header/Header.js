@@ -10,7 +10,7 @@ function Header() {
       <div className={styles.header}>
         <ul className={styles.first}>
           <li>
-            <Link to="/" style={{ textDecoration: "none", color:"white" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "white" }}>
               럭셔리 쇼핑이 참 쉽다, 발랑
             </Link>
           </li>
@@ -22,7 +22,10 @@ function Header() {
               </li>
               <li>|</li>
               <li>
-                <Link to="/mypage" style={{ textDecoration: "none", color:"white"}}>
+                <Link
+                  to="/mypage"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
                   마이페이지
                 </Link>
               </li>
@@ -34,13 +37,19 @@ function Header() {
           ) : (
             <ul>
               <li>
-                <Link to="/sign-in" style={{ textDecoration: "none", color:"white"}}>
+                <Link
+                  to="/sign-in"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
                   로그인
                 </Link>
               </li>
               <li>|</li>
               <li>
-                <Link to="/sign-in" style={{ textDecoration: "none", color:"white" }}>
+                <Link
+                  to="/sign-in"
+                  style={{ textDecoration: "none", color: "white" }}
+                >
                   마이페이지
                 </Link>
               </li>
@@ -59,14 +68,42 @@ function Header() {
             <li>|</li>
             <li>MEN</li>
           </ul>
-          <li className={styles.mainLogo}><Link to="/" style={{ textDecoration: "none",color:"black", fontSize:80, fontFamily:""}}>BALLANG</Link></li>
+          <li className={styles.mainLogo}>
+            <Link
+              to="/"
+              style={{
+                textDecoration: "none",
+                color: "black",
+                fontSize: 80,
+                fontFamily: "",
+              }}
+            >
+              BALLANG
+            </Link>
+          </li>
           <ul>
             <li>
-              <input type="text" placeholder="검색어를 입력하세요"/>
+              <input type="text" placeholder="검색어를 입력하세요" />
             </li>
-            <li>
-              <img src="" alt="장바구니 이미지"></img>
-            </li>
+            {isLoggedIn ? (
+              <li>
+                <Link to="/cart">
+                  <img
+                    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcjaXK5%2FbtsEmUHaqUj%2Fwq2hfJFM2IxUfCVANazyy0%2Fimg.png"
+                    alt="장바구니 이미지"
+                  ></img>
+                </Link>
+              </li>
+            ) : (
+              <li>
+                <Link to="/sign-in">
+                  <img
+                    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcjaXK5%2FbtsEmUHaqUj%2Fwq2hfJFM2IxUfCVANazyy0%2Fimg.png"
+                    alt="장바구니 이미지"
+                  ></img>
+                </Link>
+              </li>
+            )}
           </ul>
         </ul>
       </div>

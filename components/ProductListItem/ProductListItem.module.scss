@@ -1,4 +1,8 @@
 .product{
+    text-decoration: none;
+    color: inherit;
+}
+.item{
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -9,6 +13,7 @@
         justify-content: left;
         >li{
             padding-right: 10px;
+            text-decoration: none;
         }
         :nth-child(2){
             color: red;

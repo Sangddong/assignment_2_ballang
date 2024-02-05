@@ -4,7 +4,7 @@ const userSlice = createSlice({
   name: 'user',
   initialState: {
     nickname: "initialNickname",
-    address: "initialAddress"
+    address: "initialAddress",
   },
   reducers: {
     updateNickname(state, action) {

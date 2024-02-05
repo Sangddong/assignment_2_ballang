@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from "react-router-dom";
 import api from '../../api/api';
+import { AiFillShopping } from "react-icons/ai";
 
 function DetailPage() {
   const { productId } = useParams();
@@ -27,7 +28,7 @@ function DetailPage() {
               <li>{product.standard_price}</li>
               <li>판매가</li>
               <li>{product.price}</li>
-              <button><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcjaXK5%2FbtsEmUHaqUj%2Fwq2hfJFM2IxUfCVANazyy0%2Fimg.png" alt="장바구니"></img></button>
+              <button><AiFillShopping /></button>
             </ul>
           </ul>
         </ul>

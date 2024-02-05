@@ -25,23 +25,25 @@ function SignInPage() {
         navigate("/")
       ) : (
         <form onSubmit={(e) => e.preventDefault()}>
-          <input
-            type="text"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="아이디를 입력해 주세요"
-          />
-
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="비밀번호를 입력해 주세요"
-          />
-
-          <button onClick={handleClickSignIn}>
-            로그인하기
-          </button>
+          <div>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="아이디를 입력해 주세요"
+            />
+          </div>
+          <div>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="비밀번호를 입력해 주세요"
+            />
+          </div>
+          <div>
+            <button onClick={handleClickSignIn}>로그인하기</button>
+          </div>
         </form>
       )}
     </div>

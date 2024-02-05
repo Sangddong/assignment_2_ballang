@@ -2,6 +2,7 @@ import React from "react";
 import { useAuth } from "../../contexts/auth.context";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
+import { AiFillShopping } from "react-icons/ai";
 
 function Header() {
   const { isLoggedIn, logOut } = useAuth();
@@ -87,20 +88,14 @@ function Header() {
             </li>
             {isLoggedIn ? (
               <li>
-                <Link to="/cart">
-                  <img
-                    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcjaXK5%2FbtsEmUHaqUj%2Fwq2hfJFM2IxUfCVANazyy0%2Fimg.png"
-                    alt="장바구니 이미지"
-                  ></img>
+                <Link to='/cart'>
+                <AiFillShopping />
                 </Link>
               </li>
             ) : (
               <li>
                 <Link to="/sign-in">
-                  <img
-                    src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcjaXK5%2FbtsEmUHaqUj%2Fwq2hfJFM2IxUfCVANazyy0%2Fimg.png"
-                    alt="장바구니 이미지"
-                  ></img>
+                <AiFillShopping />
                 </Link>
               </li>
             )}
